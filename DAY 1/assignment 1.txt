@@ -1,0 +1,24 @@
+ASSIGNMENT-1
+~~~~~~~~~~~~
+1.	What is JSON?
+•	JSON stands for JavaScript Object Notation
+•	JSON is a lightweight format for storing and transporting data
+•	JSON is often used when data is sent from a server to a web page
+•	JSON is "self-describing" and easy to understand
+
+2.	What is HTTP Status codes?
+HTTP response status codes
+•	Informational responses ( 100 – 199 )
+•	Successful responses ( 200 – 299 )
+•	Redirection messages ( 300 – 399 )
+•	Client error responses ( 400 – 499 )
+•	Server error responses ( 500 – 599 )
+
+3.	What is the meaning of 500 Status codes?
+
+The HyperText Transfer Protocol (HTTP) 500 Internal Server Error server error response code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.
+
+4.	What is No-Sql Databases?
+
+NoSQL originally referring to non SQL or non relational is a database that provides a mechanism for storage and retrieval of data.
+
