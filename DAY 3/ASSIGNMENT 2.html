@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <style>
+        .card {
+          margin-left:35%;
+          width: 25%;
+          height: 60%;
+          border-radius: 5px;
+          opacity: 10;
+          background-image: url(piz.jpg);
+        color:rgb(5, 5, 5);
+        position: relative;
+        size: 20px;
+        }
+        
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        
+        .card1 {
+          margin-left:25%;
+          width: 50%;
+          height: 40%;
+          border-radius: 5px;
+     
+          background-color: rgb(145, 177, 211);
+        color:rgb(255, 255, 255);
+        
+        }
+        
+        
+        
+        </style></head>
+    <body>
+        <h3 align="center">ASSIGNMENT 2</h3>
+        <hr/>
+
+
+        <div class="card">
+            <div class="container">
+             
+
+        <form action="register.php" method="post"> 
+            <fieldset>
+                <legend>Order details</legend>
+                First Name  : <input id="txtFname" name="txtFname" />
+                <br/><br/>
+
+                Food name  : <input id="Food" name="Food" />
+                <br/><br/>
+
+                size  :  
+                    <input type="radio" id="r1" name="size" value="small" /> small
+                    <input type="radio" id="r2" name="size" value="large"/> large
+                                        <input type="radio" id="r1" name="size" value="regular" /> regular
+                <br/><br/>
+
+                Type :  
+                    <input type="checkbox" id="chk1" name="chk1" value="HTML5" /> Dine in
+                    <input type="checkbox" id="chk2" name="chk2" value="CSS3"/> Take away
+                    <input type="checkbox" id="chk3" name="chk3" value="Bootstrap"/> Parcel
+                <br/><br/>
+
+                Types of Pizza
+                <select id="s1" name="s1">
+                    <option></option>
+                    <option>Margrita</option>
+                    <option>corn </option>
+                    <option>Non veg Margrita</option>
+                    <option>panner tikka</option>
+                </select>
+                <br/><br/>
+
+                Address: <br/>
+                <textarea  name="txtAddress"  id="txtAddress" rows="5" cols="30"></textarea>
+                <br/><br/>
+
+                <input type="submit" value="Place order"  />
+
+            </fieldset>
+        </form>
+         
+    </div>
+</div>
+
+
+
+<br>
+<br>
+<div class="card1">
+    <div class="container">
+     
+
+<form action="register.php" method="post"> 
+    <fieldset>
+        <legend>Card Details</legend>
+     
+        <input type="radio" id="r1" name="size" value="small" />    Credit card(Visa , Mastercard)   
+   
+        <input type="radio" id="r2" name="size" value="large"/>      PayPal  
+
+        
+        <input type="radio" id="r3" name="size" value="large"/>      UPI Number  
+    <br/><br/>
+        Card Number  : 
+        <input id="num" name="num" />
+        <br/><br/>
+
+        <span> Expiration Year  : 
+            <input type="month" id="month" name="month" /></span>
+            CVV
+        <span> 
+            <input type="number" id="number" name="number" /></span>
+        
+            <span> The last three digit number backside of card</span>
+        <br/><br/>
+
+        Card Fullname  : 
+        <input id="txtFname" name="txtFname" />
+        <br/><br/>
+        <input type="submit" value="Place order"  />
+
+    </fieldset>
+</form>
+ 
+</div>
+</div>
+
+<div align="center">
+
+
+    <map name="workmap">
+      <area shape="rect" coords="47,507,210,310" alt="Computer" href="b1.html">
+      <area shape="rect" coords="600,300,333,250" alt="Phone" href="b2.html">
+    </map>
+
+
+<br>
+<br>
+       
+<img   onmousemove="getCoords(event)"
+src="ban.jpeg" 
+alt="Workplace" 
+usemap="#workmap" 
+width="50%" height="50%" align="center" />
+
+<h1 id="head1"></h1>
+
+
+</div>
+<script>
+function   getCoords(e)
+{
+var obj = document.getElementById("head1");
+obj.innerText  = "X = " + e.clientX + ",  Y = " + e.clientY;
+}	
+</script> 
+    </body>
+</html> 
