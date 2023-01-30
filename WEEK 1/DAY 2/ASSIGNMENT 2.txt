@@ -1,0 +1,35 @@
+1.What is difference between get/post methods in form tag?
+
+The GET Method
+GET is used to request data from a specified resource.
+GET requests can be cached
+GET requests remain in the browser history
+GET requests can be bookmarked
+GET requests should never be used when dealing with sensitive data
+GET requests have length restrictions
+GET requests are only used to request data (not modify)
+
+The POST Method
+POST is used to send data to a server to create/update a resource.
+POST requests are never cached
+POST requests do not remain in the browser history
+POST requests cannot be bookmarked
+POST requests have no restrictions on data lengt
+
+2.What is querystring?
+
+A query string is the portion of a URL where data is passed to a 
+web application and/or back-end database. 
+The reason we need query strings is that the HTTP protocol is stateless by design. 
+For a website to be anything more than a brochure, you need to maintain state (store data). 
+There are a number of ways to do this: On most web servers, you can use something like session state server-side. 
+On the client, you can store via cookies. Or in the URL, you can store data via a query string.
+
+
+
+3. Why do we use  ~  and >  symbols in css selectors?		
+				
+div p	Selects all <p> elements inside <div> elements
+div > p	Selects all <p> elements where the parent is a <div> element
+div + p	Selects the first <p> element that is placed immediately after <div> elements
+p ~ ul	Selects every <ul> element that is preceded by a <p> element

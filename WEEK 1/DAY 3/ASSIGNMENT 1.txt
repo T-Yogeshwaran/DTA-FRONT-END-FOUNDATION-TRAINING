@@ -1,0 +1,16 @@
+Assignment-1
+~~~~~~~~~~~~
+1. Why do we use value attribute of <option> tag?
+The value attribute specifies the value to be sent to a server when a form is submitted. 
+The content between the opening <option> and closing </option> tags is what the browsers will display in a drop-down list.
+However, the value of the value attribute is what will be sent to the server when a form is submitted.
+
+2. What is <input type="hidden"  />  ? Why do we use?
+Hidden inputs are completely invisible in the rendered page,
+ and there is no way to make it visible in the page's content. 
+Note: The input and change events do not apply to this input type.
+
+3. Diff. between  <input type="submit"  />   and <button></button>  ?
+
+both <button type="submit"> and <input type="submit"> display as buttons and cause the form data to be submitted to the server. 
+The difference is that <button> can have content, whereas <input> cannot (it is a null element).
