@@ -1,0 +1,19 @@
+What is the use of "list" attribute?
+
+The list attribute in HTML is used to identify a list of pre-defined options for an <input> 
+element to suggest the user.
+
+what is the use of datalist
+datalist_id: It is used to specify the Id of the datalist that will used to make a link up 
+with the input element.
+
+Ex:
+<input list="cars">
+        <datalist id="cars">
+            <option value="BMW" />
+            <option value="Bentley" />
+            <option value="Mercedes" />
+            <option value="Audi" />
+            <option value="Volkswagen" />
+        </datalist>
+
