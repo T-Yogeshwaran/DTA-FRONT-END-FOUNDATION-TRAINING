@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 10</title>
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2 class="text-center">Store user data in localStorage</h2>
+    <div bp="6 8@md">
+            
+
+        <div class="card text-center mx-auto" style="width: 22rem; height:25rem; float: center;">
+          <div class="card-body">
+            <h5 class="card-title">USER DATA </h5>
+           
+        
+  
+            <form class="form-floating mb-3">
+              <input type="text" class="form-control" id="usname"  name="usname"  placeholder="" value="">
+              <label for="usname">Name</label>
+            </form>
+  
+  
+            <form class="form-floating mb-3">
+              <input type="date" class="form-control" id="date"  name="date" placeholder="DATE">
+              <label for="date">JOINED DATE</label>
+            </form>
+  
+            <form class="form-floating mb-3">
+                <input type="text" class="form-control" id="favcolor"  name="favcolor" placeholder="favcolor">
+                <label for="favcolor">FAVORITE COLOR</label>
+              </form>
+    
+  
+            <input type="button" class="btn btn-outline-success" value="Submit"   onclick="setdata()"  />
+
+  
+
+    </div>
+          </div>
+
+          
+		
+		
+		<script>		
+				function  setdata()
+				{
+                        var  txtusnameObj =  document.getElementById("usname");	
+						var  txtdateObj =  document.getElementById("date");	
+						var  txtfavcolorObj =  document.getElementById("favcolor");						
+				
+						 
+						 // 2.  Create object with input fields values 					
+						var  userObj =  { };
+						userObj.uid =  txtusnameObj.value; 
+						userObj.email =  txtdateObj.value; 
+						userObj.token =  txtfavcolorObj.value; 
+					// 	alert(userObj);
+
+						 
+						 // 3. Convert the object into JSON string				
+						var  str  =  JSON.stringify( userObj );
+				//		alert(str);
+
+						
+						 // 4.  Store the string in localStorage	
+						localStorage.setItem("userData",  str);
+
+						alert("User details are stored in localStorage");
+                        window.location.href = "userdata.html";
+
+				}		
+                
+                
+
+
+		</script>
+	
+  
+        </div>
+
+
+          </div>
+       
+  
+  
+
+</body>
+</html>
