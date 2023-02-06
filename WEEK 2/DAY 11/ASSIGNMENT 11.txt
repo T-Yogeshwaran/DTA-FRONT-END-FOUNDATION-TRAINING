@@ -1,0 +1,28 @@
+1.How to add or remove classes in javascript?
+Add a class name to the div element with id="myDIV" (in this example we use a button to add the class).
+Example
+<button onclick="myFunction()">Try it</button>
+<div id="myDIV">
+  This is a DIV element.
+</div>
+
+Remove Class
+we will use a button to remove the "mystyle" class from the <div> element with id="myDIV":
+Example
+<button onclick="myFunction()">Try it</button>
+<div id="myDIV" class="mystyle">
+  This is a DIV element.
+</div>
+
+
+2.what is cdn and why it is used?
+
+A CDN is a network of servers that distributes content from an “origin” server throughout the world
+ by caching content close to where each end user is accessing the internet via a web-enabled device. 
+The content they request is first stored on the origin server and is then replicated and stored elsewhere as needed.
+
+3.What is Minification
+Minification is the process of minimizing code and markup in your web pages and script files. 
+It’s one of the main methods used to reduce load times and bandwidth usage on websites. 
+Minification dramatically improves site speed and accessibility, directly translating into a better user experience. 
+It’s also beneficial to users accessing your website through a limited data plan and who would like to save on their bandwidth usage while surfing the web.
