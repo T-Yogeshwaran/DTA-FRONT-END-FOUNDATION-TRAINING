@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 11</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+</head>
+<body>
+ 
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Bootstrap</span>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+
+  
+<div class="container">
+
+    <div class="card gap-3">
+        <div class="card-body text-infos p-8" style="font-family: 'Lucida Sans';">
+         
+          <p class="text-start">Daily progress</p><br>
+    
+          <div class="d-flex">
+            <div class="p-2 text-start flex-fill">Overall Process</div>
+          
+            <div class="p-2 text-end text-bold text-info flex-fill">50%</div>
+          </div>
+        
+    
+          <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-info" style="width: 50%"></div>
+          </div>
+          <br>
+    
+          
+          <div class="d-flex">
+            <div class="p-2 text-start flex-fill">Week Process</div>
+          
+            <div class="p-2 text-end text-bold text-warning flex-fill">70%</div>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-warning" style="width: 75%"></div>
+          </div>
+          <br>
+          
+          <div class="d-flex">
+            <div class="p-2 text-start flex-fill">Daily Process</div>
+          
+            <div class="p-2 text-end text-bold text-danger flex-fill">100%</div>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-danger" style="width: 100%"></div>
+          </div>
+    
+    
+        </div>
+    </div>
+    <br>
+    <div class="alert alert-warning" role="alert">
+    1.Join the meet soon.<br>
+    2.Login to join the meet.<br>
+    3.Use correct login Credentials.<br>
+    </div>
+    
+   
+</div>
+
+
+
+    
+    
+
+    
+
+
+
+
+
+
+
+
+    
+
+    
+
+  
+ 
+  <script>
+    var currentChunk = 0;
+var chunks = 100;
+
+$('.alert').click(function() {
+  $(".alert").alert('close');
+});
+
+$('.alert').hover(function() {
+  window.clearInterval(timer);
+  window.clearTimeout(time);
+  $(".alert").css('opacity', 1);
+}, function() {
+  $(".alert").css('opacity', .9);
+  timer = setInterval(function() {
+    update();
+  }, 10);
+});
+
+var timer = setInterval(function() {
+  update();
+}, 10);
+
+var time = window.setTimeout(function() {
+  $(".alert").fadeTo(1000, 0).slideUp(1000, function() {
+    $(this).remove();
+  });
+}, ((chunks - currentChunk) * 1000));
+
+function update() {
+  currentChunk += 0.01;
+  var progPercent = 100 - (currentChunk * (100 / chunks));
+  $(".progress-bar").css('width', progPercent + '%').attr('aria-valuenow', progPercent);
+
+  if (progPercent <= 0) {
+    $(".alert").remove();
+  }
+
+  if (currentChunk >= 5) {
+    window.clearInterval(timer);
+  }
+}
+  </script>
+</body>
+</html>

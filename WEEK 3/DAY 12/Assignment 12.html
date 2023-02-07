@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 11</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+</head>
+<body>
+ 
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Bootstrap</span>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+
+  
+<div class="container">
+
+  <div class="card gap-3">
+    <div class="card-body text-infos p-8" style="font-family: 'Lucida Sans';">
+     
+      <p class="text-start">Daily progress</p><br>
+
+      <div class="d-flex">
+        <div class="p-2 text-start flex-fill">Overall Process</div>
+      
+        <div class="p-2 text-end text-bold text-info flex-fill">50%</div>
+      </div>
+    
+
+      <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-info" style="width: 50%"></div>
+      </div>
+      <br>
+
+      
+      <div class="d-flex">
+        <div class="p-2 text-start flex-fill">Week Process</div>
+      
+        <div class="p-2 text-end text-bold text-warning flex-fill">70%</div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-warning" style="width: 75%"></div>
+      </div>
+      <br>
+      
+      <div class="d-flex">
+        <div class="p-2 text-start flex-fill">Daily Process</div>
+      
+        <div class="p-2 text-end text-bold text-danger flex-fill">100%</div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-danger" style="width: 100%"></div>
+      </div>
+
+
+    </div>
+</div>
+<br>
+<div class="alert alert-warning" role="alert">
+1.Join the meet soon.<br>
+2.Login to join the meet.<br>
+3.Use correct login Credentials.<br>
+</div>
+
+<!-- 
+
+  <div class="alert alert-success" id="alert" role="alert" style="cursor:pointer;opacity:.65">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>1.Join the meeet on time.
+      2.Try to be interactive in meet.
+    </strong> 
+    -->
+<!-- 
+  <div class="progress">
+    <div class="progress-bar bg-success" id="pb" style="width:100%;opacity:0.5"></div>
+    </div> -->
+  <br>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card gap-3">
+            <div class="card-body text-infos p-8" style="font-family: 'Lucida Sans';">
+              <p class="text-success p-8 text-uppercase" style="font-family: 'Lucida Sans';">Bootstrap</p>
+
+
+                Bootstrap’s grid system uses a series of containers, 
+                rows, and columns to layout and align content. 
+                It’s built with flexbox and is fully responsive. 
+                Below is an example and an in-depth explanation
+                 for how the grid system comes together.
+
+            </div>
+        </div>
+    </div>
+
+      <div class="col-sm-4 ">
+        <div class="card gap-3">
+          <div class="card-body text-primary p-8" style="font-family: 'Lucida Sans';">
+            <p class="text-success p-8 text-uppercase" style="font-family: 'Lucida Sans';"><u>Bootstrap</u>
+            </p>
+
+
+              Bootstrap’s grid system uses a series of containers, 
+              rows, and columns to layout and align content. 
+              It’s built with flexbox and is fully responsive. 
+              Below is an example and an in-depth explanation
+               for how the grid system comes together.
+
+<p> login for more details... <br><br>
+  <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-arrow-right" aria-hidden="true"></i>
+  </button>
+  </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <br>
+    <br>
+    
+
+    
+    
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <form  name="loginform" action="Assignment 12.html">
+
+      
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" name="ed" placeholder="name@example.com">
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" name="pass" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
+                </div>
+  
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" value="login"  onclick="login()" class="btn btn-primary">submit</button>
+      </div>
+      
+     </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+      <div class="container-fluid">
+                 <img class="im1" src="img/1.jpg" height="30" width="30" alt="loading"/>   
+              
+                  <img  class="im2" src="img/2.jpg" height="30" width="30" alt="loading"/> <br>
+        
+      </div>
+    </nav>
+    
+
+    <script>
+      function login(){
+            var user = document.loginform.ed.value;
+            var pass = document.loginform.pass.value;
+      if(user == "" || pass == ""){
+              alert("sorry...Please Enter Username and Passowrd");
+         }else{
+      if((user == "admin" || user == "ADMIN") && pass == "admin123"){
+              document.loginform.submit();
+              
+window.location.href = "Ass12.html";
+
+        }else{
+             alert("Please Enter Correct Credentials");
+      }
+           }
+               }
+    </script>
+
+    
+
+  
+    <script>
+      var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+myInput.focus()
+})
+  </script>
+
+</body>
+</html>
