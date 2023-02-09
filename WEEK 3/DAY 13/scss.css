@@ -1,0 +1,42 @@
+div {
+  color: lightblue;
+  border: 1px solid lightblue;
+  height: 150px;
+  width: 250px;
+  box-shadow: 2px 2px 2px lightblue;
+  margin-left: 40%;
+  margin-right: 25%;
+  float: center;
+  text-align: center;
+  font-size: 30px;
+}
+
+.tx1 {
+  font-size: 5px;
+  color: red;
+}
+
+.tx2 {
+  font-size: 10px;
+  color: red;
+}
+
+.tx3 {
+  font-size: 15px;
+  color: red;
+}
+
+.tx4 {
+  font-size: 20px;
+  color: Green;
+}
+
+.tx5 {
+  font-size: 25px;
+  color: Green;
+}
+
+.tx6 {
+  font-size: 30px;
+  color: Green;
+}/*# sourceMappingURL=scss.css.map */

@@ -1,0 +1,40 @@
+$primary-color :  lightblue;
+;
+
+div
+{
+    color :   $primary-color;
+    border: 1px solid $primary-color;
+    height: 150px;
+    width: 250px;
+    box-shadow: 2px 2px 2px $primary-color;
+    margin-left: 40%;
+    margin-right:25%;
+    float:center;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+
+$font:5px;
+$i:0;
+
+@for $i from 1 to 7
+{ 
+    .tx#{$i}
+    {
+        font-size :  $font * $i;
+
+        @if($i > 3)
+        {
+            color: Green;
+        }
+        @else 
+        {
+            color: red;
+        }
+        
+
+    }
+}
