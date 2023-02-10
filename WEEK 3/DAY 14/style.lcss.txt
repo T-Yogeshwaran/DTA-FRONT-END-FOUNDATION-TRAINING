@@ -1,0 +1,37 @@
+// This is main Style File
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background-color: lightyellow;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    color :  Green;
+  }
+
+   
+
+a
+{
+  color : deeppink;
+  text-decoration: none;
+  &:hover
+  {
+    color : blue;
+    text-decoration: underline;
+  }
+}
+
+
+
+.parent
+{
+    border: 1px solid gray;
+    padding :  5px;
+
+    &  .child
+    {
+      color :  blue;
+    }
+}

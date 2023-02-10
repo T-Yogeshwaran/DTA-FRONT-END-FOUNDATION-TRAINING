@@ -1,0 +1,120 @@
+// This is main Style File
+
+@import 'h1';
+
+
+  .shadowFn()
+{
+  border: 2px solid black;
+  box-shadow : 10px 10px 5px rgb(48, 47, 47);    
+  margin-left : 30%;
+  margin-right : 30%; 
+  margin-top: 10%
+}
+
+
+   .card{
+    .shadowFn();
+  transition: 0.3s;
+  width: 40%;
+   }
+
+a
+{
+  color : rgb(9, 9, 9);
+  text-decoration: none;
+  &:hover
+  {
+    color : rgb(12, 12, 12);
+    font-size: xx-large;
+  text-decoration: underline;
+  }
+}
+
+
+
+// Merging option
+
+
+
+// Mixin with parameters
+.theme (@themeColor)
+{
+    border: 2px ;
+    color : @themeColor;
+    background-color: black;
+  color: beige;
+    padding: 10px;    
+    border-radius: 10px;   
+    border-top-width: 10px;
+    width:200px;
+    float: center;
+    margin-top: 10px ;
+    margin-left: 30%;
+    text-align: center;
+    
+  }
+
+  
+.successBox
+{    
+    .theme(Green)
+}
+
+.warningBox
+{    
+    .theme(Red)
+}
+
+.infoBox
+{    
+    .theme(Blue)
+}
+
+.btn (@themeColor)
+{
+    border: 2px ;
+    color : @themeColor;
+    padding: 10px;    
+    text-align: center;
+   
+    
+  }
+
+
+.btn1
+{    
+    .btn(Red)
+}
+
+.btn2
+{    
+    .btn(Blue)
+
+    
+    
+}
+
+
+
+
+.circle
+{
+    border: 2px solid black;  
+    background-color: gray;
+    border-radius: 80px;
+    padding: 5px;     
+    margin-bottom : 10px;
+    height: 150px;
+    width: 150px;
+  }
+
+.square
+{
+    border: 2px solid rgb(238, 33, 33);  
+    background-color: rgb(18, 254, 30);
+    color :  black;  
+    height: 150px;
+    width: 150px;
+  }
+
