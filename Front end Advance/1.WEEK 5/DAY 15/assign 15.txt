@@ -1,0 +1,50 @@
+
+
+ Assignment-2
+~~~~~~~~~~~~
+1. Is it possible to disable JavaScript in browser?  If yes, How to disable javascript in browser?
+
+If you’re tired of using JavaScript, do the following:
+
+Click on the “Gear” icon to open Options, followed by “Internet Options.”
+Then, hit “Security,” and “Custom Level. ”
+Next, scroll to “Scripting” and choose the box that says “ Disable.”
+Congrats, you have successfully disabled JavaScript.
+
+
+2. What is the difference between undefined and not defined in JavaScript?
+"undefined" indicates that a variable has been declared but not given a value,
+ while "not defined" indicates that a variable does not exist.
+
+3. Difference between ==  and ===?
+= is called as assignment operator, == is called as comparison operator 
+whereas It is also called as comparison operator.
+
+4. What does the isNaN() function?
+isNaN() The isNaN() function determines whether a value is NaN when converted to a number.
+
+5. Difference between Client side JavaScript and Server side JavaScript?
+
+1. Client-side scripting : 
+Web browsers execute client-side scripting. It is used when browsers have all code.
+ Source code is used to transfer from webserver to user’s computer over the internet and run directly on browsers.
+ It is also used for validations and functionality for user events. 
+
+It allows for more interactivity. It usually performs several actions without going to the user. 
+It cannot be basically used to connect to databases on a web server.
+These scripts cannot access the file system that resides in the web browser. 
+Pages are altered on basis of the user’s choice. It can also be used to create “cookies” that store data on the user’s computer. 
+
+2. Server-side scripting : 
+Web servers are used to execute server-side scripting. 
+They are basically used to create dynamic pages.
+ It can also access the file system residing at the webserver.
+ A server-side environment that runs on a scripting language is a web server. 
+Scripts can be written in any of a number of server-side scripting languages available. 
+It is used to retrieve and generate content for dynamic pages. It is used to require to download plugins.
+ In this load times are generally faster than client-side scripting. When you need to store and retrieve information a database will be used to contain data.
+ It can use huge resources of the server. It reduces client-side computation overhead. 
+The server sends pages to the request of the user/client. 
+
+6. Practical :  Write a JavaScript code to display Employee details as follows in console window: 
+				Empno : 12645,  Ename  :  Scott,  Job : Manager, Salary :  45000

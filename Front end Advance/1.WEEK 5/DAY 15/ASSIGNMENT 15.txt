@@ -1,0 +1,12 @@
+1. What are the popup boxes in javascript?
+
+In Javascript, popup boxes are used to display the message or notification to the user. 
+There are three types of pop-up boxes in JavaScript namely 
+Alert Box, 
+Confirm Box and 
+Prompt Box. 
+
+2. What is JavaScript engine for Safari?
+
+JavaScriptCore is Apple's engine for its Safari browser. Other WebKit-based browsers also use it. 
+KJS from KDE was the starting point for its development. Chakra is the engine of the Internet Explorer browser.
