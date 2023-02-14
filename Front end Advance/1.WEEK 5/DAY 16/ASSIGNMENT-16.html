@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 16</title>
+    <style></style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- Compressed CSS -->
+</head>
+<body>
+    <div class="container">
+
+
+
+
+          
+            <div class="card text-center  d-flex justify-content-evenly" style="width: 18rem; height:18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Login Form</h5>
+                 
+                  
+  <h3 class="text-success" id="txt1"> </h3>
+
+               
+    <h3 class="text-danger" id="txt2"> </h3>
+  
+  
+  
+      <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="i1" placeholder="name@example.com">
+                    <label for="i1">Email address</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="i2" placeholder="Password">
+                    <label for="i2">Password</label>
+                  </div>
+                  <br>
+                  <input class="btn btn-success" type="submit" onclick="fn_user()">
+                  <input class="btn btn-primary" type="reset" value="Reset">
+                </div>
+            
+            
+            
+            </div>
+
+
+
+      
+                  
+ 
+            <br>
+            <br>
+
+
+            <div class="card text-center d-flex justify-content-evenly" style="width: 18rem; height:18rem; ">
+                <div class="card-body">
+          
+  <h5 class="card-title">Product Calculation Form</h5>
+                 
+      <div class="form-floating mb-3">
+
+        
+        <div class="form-floating">
+            <input type="text" class="form-control" id="pn" placeholder="">
+            <label for="pn">Product name </label>
+          </div>
+
+          <div class="form-floating">
+                    <input type="number" class="form-control" id="pu" placeholder="">
+                    <label for="pu">Product unit</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="number" class="form-control" id="pq" placeholder="">
+                    <label for="pq">Product Quantity</label>
+                  </div>
+                  <br>
+                  <input class="btn btn-success" type="submit" onclick="fn_product()">
+                  <input class="btn btn-primary" type="reset" value="Reset">
+
+                  <p id="p1"></p>
+                </div>
+
+
+                </div>
+
+
+</div>
+
+
+<br>
+<br>
+
+
+
+<div class="card text-center mx-auto d-flex justify-content-center" style="width: 18rem; height:18rem; float: center;">
+    <div class="card-body">
+
+        
+  <h5 class="card-title">Calculater</h5>
+                 
+
+        <div class="form-floating">
+            <input type="number" class="form-control" id="v1" placeholder="">
+            <label for="pu">value 1</label>
+          </div>
+
+
+          <div class="form-floating">
+            <input type="number" class="form-control" id="v2" placeholder="">
+            <label for="pq">value 2</label>
+          </div>
+
+
+		<select class="form-select" aria-label="Default select example" id="s1">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>%</option>
+		</select>
+		 
+        
+        <p id="t1"></p>
+	
+		 </fieldset>	
+         
+         <input class="btn btn-success" type="submit" onclick="getdata()">
+         <input class="btn btn-primary" type="reset" value="Reset">
+
+      
+         </div>
+         </div>
+
+
+
+   
+ 
+         <br>
+         <br>
+
+
+         <div class="card text-center mx-auto d-flex justify-content-end" style="width: 18rem; height:auto; float: center;">
+             <div class="card-body">
+       
+         <h6> Loops </h6>
+   
+         
+         <input class="btn btn-success" type="button"  value="While"  onclick="fn_while()"  />
+         <input class="btn btn-success" type="button"  value="Do..While"  onclick="fn_dowhile()"  />
+         <input class="btn btn-success" type="button"  value="For"  onclick="fn_for()"  />
+         
+         <p id="l1" class="text-center"></p>
+         
+         </div>
+         </div>
+<br>
+<br>
+
+         
+         <div class="card text-center mx-auto d-flex justify-content-end" style="width: 18rem; height:auto; float: center;">
+            <div class="card-body">
+      
+
+
+         Select City Code  :  
+         <select id="s1">
+             <option>HYD</option>
+             <option>BLR</option>
+             <option>MUM</option>
+             <option>GUR</option>
+         </select>
+          
+         <input  class="btn btn-success"  type="button"  value="Get Branch Details"  onclick="fn_getData()"  />
+         <p  id="st1"></p>
+         	
+         </div>
+         </div>
+
+         <script>		
+                 function  fn_getData()
+                 {
+                     var  paraObj  =  document.getElementById("st1");		
+                     var  selectObj  =  document.getElementById("s1");	
+                     
+                     
+                 switch( selectObj.value  )
+                 { 
+                             case "HYD" :    	paraObj.innerHTML = "You have selected Hyderabad Branch";  
+                                                         break; 
+                                                         
+                             case "BLR" :    	paraObj.innerHTML = "You have selected Bangalore Branch";  
+                                                         break; 
+                                                         
+                             case "MUM" :    	paraObj.innerHTML = "You have selected Mumbai Branch";  
+                                                         break; 
+                             
+                             case "GUR" :    	paraObj.innerHTML = "You have selected Gurgaon Branch";  
+                                                         break; 
+                     }
+                          
+                     
+                 }		
+         </script>
+
+
+         <script>	
+             function    fn_while()
+            {	 
+                 var  paraObj  =  document.getElementById("l1");
+                 paraObj.innerHTML = "";
+                 
+                 var  i = 1;
+                 while(  i <= 10  )
+                 {			if(i%2==0){
+
+                    paraObj.innerHTML  += "<li class=\"text-success\"> Welcome to JavaScript :"  +  i  +  "</li>" ;
+                    
+                 }else{
+
+                    paraObj.innerHTML  += "<li class=\"text-info\"> Welcome to JavaScript"  +  i + ":</li>"  ;
+                
+                 }	 
+                     i++;
+                 }
+                  
+             }
+             
+             function    fn_dowhile()
+            {	 
+                 var  paraObj  =  document.getElementById("l1");
+                 
+                 
+                 var  i = 10;
+                 var  str  = "";
+                 
+                 do
+                 {
+              
+
+
+                    if(i%2==0){
+
+                        str  += "<li class=\"text-success\"> Welcome to JavaScript :"  +  i  +  "</li>" ;
+
+}else{
+
+    str  += "<li class=\"text-info\"> Welcome to JavaScript"  +  i + ":</li>"  ;
+
+}	 
+
+
+                     
+                     i--;
+                 }while(  i   >= 1 );
+                 
+                 paraObj.innerHTML = str;
+                 
+             }
+             
+             function    fn_for()
+            {	 
+                 var  paraObj  =  document.getElementById("l1");				
+                 var  str = "";
+                 
+                 for(var i = 0; i <= 10; i++)
+                 { 
+                     
+                    if(i%2==0){
+
+str  += "<li class=\"text-success\"> Welcome to JavaScript :"  +  i*2  +  "</li>" ;
+
+}else{
+
+str  += "<li class=\"text-info\"> Welcome to JavaScript"  +  i*2 + ":</li>"  ;
+
+}	 
+
+                 }
+                 
+                 paraObj.innerHTML = str;
+             }
+             
+         </script>
+
+         </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script>		
+				function  getdata()
+				{
+					var  txtObj1  =  document.getElementById("v1");		
+					var  txtObj2  =  document.getElementById("v2");
+					var  select1  =  document.getElementById("s1");	
+
+					
+					
+				switch( select1.value  )
+				{ 
+							case "+" :    	
+    var  s  =  parseInt(txtObj1.value) + parseInt(txtObj2.value);
+    var disp = document.getElementById("t1");
+    disp.innerHTML = " Add : " +  s;  
+							break; 
+														
+							case "-" : 
+    var  s  =  parseInt(txtObj1.value) - parseInt(txtObj2.value);
+    var disp = document.getElementById("t1");
+    disp.innerHTML = " SUB : " +  s;  
+							break; 
+														
+							case "*" :
+    var  s  =  parseInt(txtObj1.value) * parseInt(txtObj2.value);
+    var disp = document.getElementById("t1");
+    disp.innerHTML = " MULTIPLY : " +  s;  
+							break; 
+							
+							case "%" :
+    var  s  =  parseInt(txtObj1.value) % parseInt(txtObj2.value);
+    var disp = document.getElementById("t1");
+    disp.innerHTML = "DIVIDE : " +  s;  
+							break; 
+					}
+						 
+					
+				}		
+		</script>
+
+
+
+
+
+
+
+
+                
+<script>
+
+
+function    fn_user()
+		   {		   
+				//var  choice =  confirm("Do you want to delete?");
+				
+	var txtObj1= document.getElementById("i1").value;
+    var txtObj2= document.getElementById("i2").value;
+    var ad = "admin";
+    var ps = "admin123";
+				//var  paraObj1  =  document.getElementById("p1");
+
+                if ((txtObj1 == ad) && (ps == txtObj2)) 
+				 {
+						// alert("Selected Product is deleted from cart.");
+                        txt1.innerHTML ="";
+						txt1.innerHTML  = "<p class=\"text-success\"> Welcome admin </p>";
+				 }
+				 else
+				 {
+					//	alert("You have cancelled the deletion operation.");
+                    txt1.innerHTML ="";
+						txt2.innerHTML  =  "<p class=\"text-danger\">Check your details</p>";
+				 }
+
+               
+		}
+
+
+
+
+
+
+        
+function    fn_product()
+		   {		   
+				//var  choice =  confirm("Do you want to delete?");
+				
+	var proname= document.getElementById("pn").value;
+    var txtObj1= document.getElementById("pu");
+    var txtObj2= document.getElementById("pq");
+
+    var disp = document.getElementById("p1");
+	
+	var  s  =  parseInt(txtObj1.value) + parseInt(txtObj2.value);
+     disp.innerHTML = " Product name:"  + proname + "<br>" + "Price:" + s;
+	             
+		}
+
+
+
+</script>
+    </div>
+
+</body>
+</html>
