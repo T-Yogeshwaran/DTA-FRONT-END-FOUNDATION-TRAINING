@@ -1,0 +1,78 @@
+<html>
+<body>
+
+<h2>Getting Coordinates using JavaScript</h2>
+<hr/>
+
+ 
+<img   onmousemove="fn_getMousePosition()"
+			src="img/img1.jpg"   
+			width="400" height="379"  />
+			
+<h1 id="x"></h1>
+
+
+<h3>JavaScript Programming -- Event Handling </h3>
+<hr/> 
+
+<br/><br/>
+<img   src="img/img1.jpg"  onmouseover="fn_updateImage(event)" border="2"  width="80"  height="60"  />
+<img   src="img/img2.jpg"  onmouseover="fn_updateImage(event)" border="2"  width="80"  height="60"  />
+<img   src="img/img3.jpg"  onmouseover="fn_updateImage(event)" border="2"  width="80"  height="60"  />
+<img   src="img/img3.jpg"  onmouseover="fn_updateImage(event)" border="2"  width="80"  height="60"  />
+ 
+<hr/>
+<img   src="img/img1.jpg"  id="bigImg"  border="2"  width="340"  height="340"  />
+
+
+<h3>JavaScript Programming -- Event Handling </h3>
+		<hr/>
+		
+		Select Image  :  
+		<select   id="s1"   onchange="fn_updateImage()" >
+			<!-- <option  value="Image1.png">Mountain</option> -->		 
+			<option>img1.jpg</option>
+			<option>img2.jpg</option>
+			<option>img3.jpg</option>
+			<option>Image4.png</option>
+			<option>Image5.png</option>
+			<option>Image6.png</option>	
+		</select>
+		
+	 
+		
+		<br/><br/>
+		<img   src="img/img1.jpg"  id="img22"  border="2"  width="200"  height="300"  />
+	 		
+		<script>			
+
+			//  input,  select, textarea ----  value
+			  function fn_updateImage()
+			  {
+					var  selectObj = document.getElementById("s1");
+					var  imgObj = document.getElementById("img22");					
+					imgObj.src   =  "img/" +   selectObj.value ;
+			  } 
+		</script> 
+ 
+<script> 
+	  function fn_updateImage( event ) 
+	  {			  
+			var  bgImgObj =  document.getElementById("bigImg"); 
+			bgImgObj.src =  event.target.src;
+	  }		 
+</script>  
+
+
+
+ 
+ <script>
+	function   fn_getMousePosition()
+	{
+		var obj = document.getElementById("x");
+		obj.innerText  = "X = " + event.clientX + ",  Y = " + event.clientY;
+	}	
+ </script>
+
+</body>
+</html>

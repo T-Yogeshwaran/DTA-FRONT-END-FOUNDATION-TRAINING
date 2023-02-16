@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 16</title>
+    <style></style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- Compressed CSS -->
+
+<style>
+    .error
+    {
+            color : red; 
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+
+
+
+
+<div class="card text-center mx-auto d-flex justify-content-end" style="width: 18rem; height:18rem; float: center;">
+    <div class="card-body">
+
+        
+  <h5 class="card-title">Calculater</h5>
+                 
+
+        <div class="form-floating">
+            <input type="number" class="form-control" id="v1" placeholder="">
+            <label for="pu">value 1</label>
+          </div>
+
+
+          <div class="form-floating">
+            <input type="number" class="form-control" id="v2" placeholder="">
+            <label for="pq">value 2</label>
+          </div>
+
+
+		<select class="form-select" aria-label="Default select example" id="s1">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>%</option>
+		</select>
+		 
+        
+        <br>
+
+        <input class="btn btn-success" type="submit" value="add" onclick="getans()">
+        
+        <input class="btn btn-success" type="submit"  value="sub" onclick="getans()">
+        
+        <input class="btn btn-success" type="submit"   value="div" onclick="getans()">
+        
+        <input class="btn btn-success" type="submit"  value="mul" onclick="getans()">
+
+        <p id="t1"></p>
+	
+      
+         </div>
+         </div>
+
+
+
+   
+ 
+         <br>
+         <br>
+
+
+		 
+         <form   id="form1"   name="form1"  
+         onsubmit="fn_submitData()"   
+         action="#"   method="get">			
+
+   Coustomer name :  <input class="form-control"  type="text"  id="uid"   autofocus   />  
+    <span class="error">*</span>
+   <span id="sp1" class="error"></span>
+   <br/><br/>
+
+
+   Source address :  <input  class="form-control" type="text"  id="sa"   autofocus   />  
+   <span class="error">*</span>
+  <span id="sp2" class="error"></span>
+  <br/><br/>
+
+
+  Destination address  :  <input  class="form-control" type="text"  id="da"   autofocus   />  
+  <span class="error">*</span>
+ <span id="sp3" class="error"></span>
+ <br/><br/>
+
+
+ Contact number :  <input class="form-control" type="numbers"  id="cn"   autofocus   />  
+ <span class="error">*</span>
+<span id="sp4" class="error"></span>
+<br/><br/>
+
+Email :  <input class="form-control" type="email"  id="email"   autofocus   />  
+<span class="error">*</span>
+<span id="sp5" class="error"></span>
+<br/><br/>
+
+   Password  :  <input class="form-control" type="text"  id="pwd1" name="pwd1"  />    
+   <span id="sp6" class="error"></span>					
+   <br/><br/>
+
+   Retype Password  :  <input class="form-control" type="text"  id="pwd2" name="pwd2"  />      
+   <br/><br/>
+   
+   <input  class="btn btn-sm btn-success" type="submit"  value="Register"  />		
+</form>
+
+<br>
+
+
+<table class="table table-stripped" id="table1"  border="2">
+
+    <input class="btn btn-primary" type="button"  value="Get Data"  onclick="fn_get()"  />
+	 
+  
+
+
+    
+		Skill Name  :  <input type="text"  id="t1"  />
+		<br/><br/>
+		
+		<input type="button"  value="Get Data"  onclick="fn_getData()"  />
+		<input type="button"  value="Add Data"  onclick="fn_addData()"  />
+		<input type="button"  value="Remove Data"  onclick="fn_removeData()"  />
+		
+		<ol  id="list1">				 
+		</ol>
+		 
+      
+		 
+		<script>	
+		
+		var  skillsArray = ["HTML5", "CSS3", "BOOTSTRAP", "ANGULAR", "REACT"]; 
+		
+			function    fn_getData()
+		   {
+				var  str  = "";
+				for(var i = 0; i < skillsArray.length;  i++)
+				{					      
+						str 	+=  "<li>" +  skillsArray[i] +  "</li>";	
+				}
+			 
+				var  listObj  =  document.getElementById("list1"); 
+				listObj.innerHTML = str;				
+			}
+			
+			
+			function fn_addData()
+			{ 
+					var txtObj  =  document.getElementById("t1"); 
+                    var  str  = "";
+
+
+				for(var i = 0; i < skillsArray.length;  i++)
+				{					      
+                    if(txtObj.value == skillsArray[i]  )
+                    {
+
+                        var  listObj  =  document.getElementById("list1"); 
+				listObj.innerHTML = "Duplicate value not allowed";
+                    }
+                    else{
+                        
+                        
+                fn_upper();
+                
+                }
+					
+                
+        
+				}
+
+                
+			function fn_upper(){
+                if( txtObj.value == txtObj.value.toUpperCase() )
+                    {
+                        skillsArray.push( txtObj.value );
+					fn_getData();		
+                    }
+                    else{
+
+
+                        var  listObj  =  document.getElementById("list1"); 
+				listObj.innerHTML = "Lowercase value not allowed";
+
+                    }
+
+            }
+                
+                
+         
+			}
+			
+			
+				function fn_removeData()
+			{ 
+					var txtObj  =  document.getElementById("t1"); 					
+				//	skillsArray.pop();	
+					var index =  skillsArray.indexOf( txtObj.value  );
+					alert(index);
+					skillsArray.splice( index,  1  )
+					fn_getData();				 
+			}
+			
+		</script>
+
+
+
+  <script>	
+		
+    var  skill = ["HTML5", "CSS3", "BOOTSTRAP", "ANGULAR", "REACT", "saas", "laas", "boot", "strao", "java", "r code", "r tool", "c++", "c", "node","js", "script", "android", "php", "vue"]; 
+    
+        function    fn_get()
+       {
+            var  str  = "<tr> <th>Course</th> <th>Course</th><th>Course</th><th>Course</th></tr>";
+            
+            str 	+=  "<tr>";
+            
+            for(var i = 0; i < skill.length;  i++)
+            {				
+                    if( i % 4==  0)
+                    {
+                            str 	+=  "</tr> <tr>"; 
+                    }
+                    
+                    str 	+=  "<td>" +  skill[i] +  "</td>";	
+            }
+            
+            str 	+=  "</tr>"; 
+         
+            var  tableObj  =  document.getElementById("table1"); 
+            tableObj.innerHTML = str;				
+        }
+        
+
+        
+    </script>
+<script> 	 
+function fn_submitData(){  			 
+    var  txtUid =  document.getElementById("uid");
+    var  txtsa =  document.getElementById("sa");
+    var  txtda =  document.getElementById("da");
+    var  txtcn =  document.getElementById("cn");
+    var  txtemail =  document.getElementById("email");
+    var  txtPwd1 =  document.getElementById("pwd1");
+    var  txtPwd2 =  document.getElementById("pwd2");	
+
+    var  spUidError =  document.getElementById("sp1");					 
+    var  spsaError =  document.getElementById("sp2");	
+    var  spdaError =  document.getElementById("sp3");					 
+    var   spcnError =  document.getElementById("sp4");	
+    var   spemailError =  document.getElementById("sp5");					 
+    var  spPwdError =  document.getElementById("sp6");		
+   	
+
+   spUidError.innerHTML  = "";
+   
+   spsaError.innerHTML  = "";
+   
+   spdaError.innerHTML  = "";
+   
+   spcnError.innerHTML  = "";
+   
+   spemailError.innerHTML  = "";
+   
+   spPwdError.innerHTML  = "";
+
+    
+    var  isFormValid = true;
+    
+    if(txtUid.value.length ==  0)
+    {
+           spUidError.innerHTML = "Coustomer name is required";
+           isFormValid = false;
+    }
+
+    if(txtsa.value.length ==  0)
+    {
+        spsaError.innerHTML = "Source address is required";
+           isFormValid = false;
+    }
+    
+
+    if(txtda.value.length ==  0)
+    {
+        spdaError.innerHTML = "Destination address is required";
+           isFormValid = false;
+    }
+    
+
+    if(txtcn.value.length ==  0)
+    {
+        spcnError.innerHTML = "Contact number is required";
+           isFormValid = false;
+    }
+    
+
+    if(txtemail.value.length ==  0)
+    {
+        spemailError.innerHTML = "Email Id is required";
+           isFormValid = false;
+    }
+    
+
+    if(txtcn.value.length >  10)
+    {
+        spcnError.innerHTML = "contact number is not above then 10 numbers";
+           isFormValid = false;
+    }
+    
+
+
+    if(txtPwd1.value  !=  txtPwd2.value)
+    {
+
+       spPwdError.innerHTML = "Password and retype password should be same";
+       isFormValid =  false;
+    }
+    
+    if(isFormValid == false)
+    {
+           event.preventDefault();
+    }
+}
+</script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+         	
+				function  getans(){
+
+
+					if(event.target.value == "add"){
+                        
+					var  txtObj1  =  document.getElementById("v1");		
+					var  txtObj2  =  document.getElementById("v2");
+                        var math =parseInt(txtObj1.value) + parseInt(txtObj2.value);
+    var disp = document.getElementById("t1");
+    disp.innerHTML = " Add : " +  math;  
+                    }
+                    if(event.target.value =="sub"){
+                        
+					var  txtObj1  =  document.getElementById("v1");		
+					var  txtObj2  =  document.getElementById("v2");
+                        var math =parseInt(txtObj1.value) - parseInt(txtObj2.value);
+    var disp = document.getElementById("t1");
+    disp.innerHTML = " Subtract : " +  math;  
+                    }
+                    if(event.target.value == "mul"){
+                        
+					var  txtObj1  =  document.getElementById("v1");		
+					var  txtObj2  =  document.getElementById("v2");
+                        var math =parseInt(txtObj1.value) * parseInt(txtObj2.value);
+    var disp = document.getElementById("t1");
+    disp.innerHTML = " Multiply : " +  math;  
+                    }
+                    if(event.target.value == "div"){
+                        
+					var  txtObj1  =  document.getElementById("v1");		
+					var  txtObj2  =  document.getElementById("v2");
+                        var math =parseInt(txtObj1.value) % parseInt(txtObj2.value);
+    var disp = document.getElementById("t1");
+    disp.innerHTML = " Divison : " +  math;  
+                    }
+
+				}		
+		</script>
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+</html>
