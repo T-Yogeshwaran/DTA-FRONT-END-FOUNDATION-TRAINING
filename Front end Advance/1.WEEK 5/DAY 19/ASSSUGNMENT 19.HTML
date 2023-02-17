@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 19</title>
+    <style></style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- Compressed CSS -->
+
+<style>
+    .error
+    {
+            color : red; 
+    }
+
+
+        
+</style>
+</head>
+<body>
+    <div class="container" id="container">
+
+
+        <div class="card w-75" style="margin-left: 25%;" >
+            <div class="card-body">
+
+
+
+		
+<input class="btn btn-primary btn-sm" type="button"   value="Get Data"   onclick="fn_getData()"  />
+	 
+<br/><br/>
+<table  id="table1" class="table table-stripped" border="2"  width="500"  cellpadding="10" cellspacing="0">
+    <tr>
+        <th>ID</th>
+            <th>MAIL</th>
+           <th>First_name</th>
+            <th>Last_name</th>
+            <th>Avatar</th>
+            
+
+    </tr>
+</table>
+
+
+
+            </div>
+        </div>
+<script>
+    var x = 23 * "Hello";
+     console.log(x);
+</script>
+
+
+        
+<script> 
+ function   fn_getData()
+
+ {		
+    
+    
+  
+      var arr = 
+[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},
+{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},
+{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},
+{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},
+{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},
+{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}
+];
+
+      
+	  var table = document.getElementById("table1");
+
+      arr.map((item) => {
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+
+        
+
+
+
+
+
+        cell1.innerHTML = item.id;
+        cell2.innerHTML = item.email;
+        cell3.innerHTML = item.first_name;
+        cell4.innerHTML = item.last_name;
+
+        var img = document.createElement("img");
+        img.src = item.avatar;
+        cell5.appendChild(img);
+
+
+      });
+
+ }
+
+	
+        
+        </script>
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+</html>
