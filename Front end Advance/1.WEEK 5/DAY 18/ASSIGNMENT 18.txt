@@ -1,0 +1,26 @@
+1.    What is map() method in Array?   How to use map() method?
+
+map() creates a new array from calling a function for every array element.
+ map() calls a function once for each element in an array.
+map() does not execute the function for empty elements.
+ map() does not change the original array.
+
+
+2.   Find the details about following methods of Array:
+					find(),  findIndex(),  filter()
+
+
+
+Use case 1 : Find :
+Use array ‘find’ method to traverse through the array to get a result of single entity when the condition matches for very first time else returns ‘undefined’.
+Loop executes only till the first match. CallbackFn is run even for indexes with unassigned values.
+
+
+Use case 2 : Filter :
+Use array ‘filter’ method to traverse through the array to get results of all entities for which the condition matches else returns empty array ’[]’.
+Loop executes for all the entities. CallbackFn doesn’t run for indexes with unassigned values.
+
+
+Use case 3: FindIndex :
+Use array ‘findIndex’ method to traverse through the array to get an integer result of ‘index number’ when the condition matches for any entity for first time else returns ‘-1’.
+Loop executes only till the first match. CallbackFn is run even for indexes with unassigned values.
