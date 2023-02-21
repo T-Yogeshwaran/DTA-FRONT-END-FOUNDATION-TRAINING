@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container">
+
+        <div class="card">
+
+<div class="card-body">
+    
+ <h1>Enter Customer Details</h1>
+    <form id="customerForm">
+      <label for="custId" class="form-label">Customer ID:</label>
+      <input type="text" class="form-control" id="custId" name="custId"><br>
+
+      <label for="fname" class="form-label">First Name:</label>
+      <input type="text" class="form-control" id="fname" name="fname"><br>
+
+      <label for="lname" class="form-label">Last Name:</label>
+      <input type="text" class="form-control" id="lname" name="lname"><br>
+
+      <label for="phone" class="form-label">Phone Number:</label>
+      <input type="tel" class="form-control" id="phone" name="phone"><br>
+
+      <label for="email" class="form-label">Email Address:</label>
+      <input type="email" class="form-control" id="email" name="email"><br>
+
+      <input type="submit" class="btn btn-info btn-sm" value="Submit">
+    </form>
+
+    
+<p id="para"></p>
+
+<hr>
+    <h3>Find by id</h3>
+    <p><input type="number" class="form-control" id="ageToCheck" value="1"></p>
+
+    <table  class="table table-stripped"  border="2"  width="500"  cellpadding="10" cellspacing="0" >
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+
+        </tr>
+
+        <tr id="table">
+
+
+        </tr>
+    </table>
+    
+<p ></p>
+
+
+
+<button class="btn btn-info btn-sm"  onclick="myFunction()">Find by id</button>
+
+
+<h3>Find by name</h3>
+
+<p><input type="text" class="form-control" id="names" value=""></p>
+
+<table  class="table table-stripped"  border="2"  width="500"  cellpadding="10" cellspacing="0" >
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+
+    </tr>
+
+    <tr id="table1">
+
+
+    </tr>
+</table>
+
+
+<button class="btn btn-info btn-sm"  onclick="myname()">Find by name</button>
+
+<p id="demo"></p>
+
+
+            
+</div>
+        
+</div>
+</div>   
+<script>    
+
+// Example user data array
+const users = [
+  { id: 1, name: "John", age: 25 },
+  { id: 2, name: "Jane", age: 30 },
+  { id: 3, name: "Bob", age: 45 },
+  { id: 4, name: "Mary", age: 27 },
+];
+
+function myFunction() {
+    var cv = document.getElementById("ageToCheck").value;
+    console.log(cv);
+ searchById(cv);
+
+
+}
+
+// Function to display user information in a table format
+function displayUser(user) {
+
+//document.getElementById("table").innerHTML = "<td>"+ user.id +" </td> <td> " + user.name + "<td>"+ user.age +" </td>"  
+       // console.log(`| ${user.id} | ${user.name} | ${user.age} |`);
+    
+var str = "";
+
+var str = "<table border='1|1'>";
+							str  +=  "<tr>"; 
+							str  +=  "<td>" +  user.id +  "</td>"; 
+							str  +=  "<td>" +  user.name +  "</td>"; 
+							str  +=  "<td>" +  user.age +  "</td>"; 
+							str  +=  "</tr>"; 
+						
+						var  tableObj =  document.getElementById("table");	 	
+						tableObj.innerHTML = str;
+
+                        str+="</table>";
+
+}
+
+// Function to search for a user by their id number and display their information
+function searchById(id) {
+  const user = users.find(user => user.id == id);
+  if (user) {
+    
+    console.log(user);
+    displayUser(user);
+  } else {
+    console.log("User not found.");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+<script>
+    
+
+
+
+function myname() {
+    var cv = document.getElementById("names").value;
+    console.log(cv);
+ searchByname(cv);
+
+
+}
+
+// Function to display user information in a table format
+function displayname(user) {
+
+//document.getElementById("table").innerHTML = "<td>"+ user.id +" </td> <td> " + user.name + "<td>"+ user.age +" </td>"  
+       // console.log(`| ${user.id} | ${user.name} | ${user.age} |`);
+    
+var str = "";
+
+var str = "<table border='1|1'>";
+							str  +=  "<tr>"; 
+							str  +=  "<td>" +  user.id +  "</td>"; 
+							str  +=  "<td>" +  user.name +  "</td>"; 
+							str  +=  "<td>" +  user.age +  "</td>"; 
+							str  +=  "</tr>"; 
+						
+						var  tableObj =  document.getElementById("table1");	 	
+						tableObj.innerHTML = str;
+
+                        str+="</table>";
+
+}
+
+// Function to search for a user by their id number and display their information
+function searchByname(id) {
+  const user = users.find(user => user.name == id);
+  if (user) {
+    
+    console.log(user);
+    displayname(user);
+  } else {
+    console.log("User not found.");
+  }
+}
+
+
+// Example usage: search for user with id 3 and display their information
+
+
+
+
+</script>
+
+
+
+    <script>
+      const form = document.getElementById('customerForm');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // prevent form submission
+
+        const custId = form.elements['custId'].value;
+        const fname = form.elements['fname'].value;
+        const lname = form.elements['lname'].value;
+        const phone = form.elements['phone'].value;
+        const email = form.elements['email'].value;
+
+        const customer = new Customer(custId, fname, lname, phone, email);
+        customer.showDetails();
+      });
+
+      class Customer {
+  constructor(custId, fname, lname, phone, email) {
+    this.custId = custId;
+    this.fname = fname;
+    this.lname = lname;
+    this.phone = phone;
+    this.email = email;
+  }
+
+  showDetails() {
+document. getElementById("para"). innerHTML = "<b>Customer ID:" + this.custId + " <br>FirstName: " + this.fname + "<br>LastName: " + this.lname + "<br>email:" + this.email + "<br> Phone Number:" + this.phone + "</b>";
+
+
+
+  }
+}
+
+
+    </script>
+  </body>
+</html>
