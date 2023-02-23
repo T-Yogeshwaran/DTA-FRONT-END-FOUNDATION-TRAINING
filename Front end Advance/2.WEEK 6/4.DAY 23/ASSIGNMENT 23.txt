@@ -1,0 +1,37 @@
+1. Find the answers for the following questions: 
+	a. What is the eval() method?
+The eval() method evaluates or executes an argument.
+
+If the argument is an expression, eval() evaluates the expression. If the argument is one or more JavaScript statements, eval() executes the statements.
+
+
+	b. What is the purpose of  prev() and next()  methods in jQuery?  
+
+    The prev() method returns the previous sibling element of the selected element.sibling elements are elements that share the same parent.
+
+    next() method allows us to search through the immediately following sibling of these elements in the DOM tree and construct a new jQuery object from the matching elements. The method optionally accepts a selector expression of the same type that we can pass to the $() function.
+
+
+
+
+	c. How to delete all rows in a table except first row?
+
+$("#tblCustomers").find("tr:not(:first)").remove();
+
+$(table tr).slice(1).remove();
+
+$("#id_of_table").find("tr:gt(0)").remove();
+
+
+d. How to perform animation based on the width? prepare an example? 
+
+    The animate() method performs a custom animation of a set of CSS properties.
+
+This method changes an element from one state to another with CSS styles. The CSS property value is changed gradually, to create an animated effect.
+
+Only numeric values can be animated (like "margin:30px"). String values cannot be animated (like "background-color:red"), except for the strings "show", "hide" and "toggle". These values allow hiding and showing the animated element.
+
+Tip: Use "+=" or "-=" for relative animations.
+
+Syntax
+(selector).animate({styles},speed,easing,callback)

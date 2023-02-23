@@ -1,0 +1,322 @@
+<!-- Create HTML Page to display Hello World message by using jQuery -->
+<html>
+ <head> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<style>
+		.question {
+			font-weight: bold;
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+		.answer {
+			display: none;
+			margin-left: 20px;
+		}
+	</style>
+ </head>
+ <body>
+
+    <div class="container">
+
+        
+	<h3 class="text"> jQuery Programming - DOM Traversing </h3>
+	<hr />
+		
+	 <input class="form-control" id="t1" placeholder="product name" /><br>
+	<input class="form-control" id="t2" placeholder="unit price " /><br>
+	<input class="form-control" id="t3" placeholder="quantity" /><br>
+    <button class="btn btn-success" id="addRow">Submit</button>
+	<br></br> 
+
+ <table class="table" id="table1" border="2" width="400px">
+	<tr>
+		<th></th>
+        <th></th>
+		<th>Product Name</th>
+		<th>Unit Price</th>
+		<th>Units In Stock</th>
+	</tr>
+	<tr> 
+        <td><a href="#" class="removeRow">Remove</a></td>
+		<td><a href="#">Select</a></td>		
+		<td>Printer</td>
+		<td>2500.00</td>
+		<td>20</td>
+	</tr>
+	<tr>
+	<td><a href="#" class="removeRow">Remove</a></td>
+        <td><a href="#">Select</a></td>
+		<td>4GB-RAM</td>
+		<td>1200.00</td>
+		<td>23</td>
+	</tr>	 
+	<tr>
+	
+        <td><a href="#" class="removeRow">Remove</a></td>
+        <td><a href="#">Select</a></td>
+		<td>Printer</td>
+		<td>2500.00</td>
+		<td>20</td>
+	</tr>
+	<tr>
+	
+        <td><a href="#" class="removeRow">Remove</a></td>
+        <td><a href="#">Select</a></td>
+		<td>1TB Samsung HDD</td>
+		<td>4500.00</td>
+		<td>10</td>
+	</tr>
+	<tr>
+        <td><a href="#" class="removeRow">Remove</a></td>
+	   <td><a href="#">Select</a></td>
+		<td>32-GB Kingston USB</td>
+		<td>800.00</td>
+		<td>35</td>
+	</tr>
+	<tr>
+	
+        <td><a href="#" class="removeRow">Remove</a></td>
+        <td><a href="#">Select</a></td>
+		<td>Wifi Router</td>
+		<td>1800.00</td>
+		<td>15</td>
+	</tr> 
+   
+
+	</table>  
+		 
+<hr>
+<br>
+<br>
+
+<br>
+
+    
+ <table class="table" id="table2" border="2" width="400px">
+	<tr>
+		<th></th>
+        <th></th>
+		<th>Product Name</th>
+		<th>Unit Price</th>
+		<th>Units In Stock</th>
+	</tr>
+   
+    
+    </table>
+
+ <hr>
+ <br>
+ <br>
+ <br>
+
+ <table id="myTable" class="table table-stripped text-light">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Product 1</td>
+        <td>10.00</td>
+        <td>11</td>
+        <td>0.00</td>
+      </tr>
+      <tr>
+        <td>Product 2</td>
+        <td>20.00</td>
+        <td>5</td>
+        <td>100.00</td>
+      </tr>
+      <tr>
+        <td>Product 3</td>
+        <td>15.00</td>
+        <td>10</td>
+        <td>150.00</td>
+      </tr>
+      <tr>
+        <td>Product 4</td>
+        <td>25.00</td>
+        <td>0</td>
+        <td>75.00</td>
+      </tr>
+
+      <tr>
+        <td>Product 6</td>
+        <td>10.00</td>
+        <td>0</td>
+        <td>0.00</td>
+      </tr>
+
+
+      <tr>
+        <td>Product 7</td>
+        <td>10.00</td>
+        <td>11</td>
+        <td>0.00</td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+  <hr>
+  <br>
+  <br>
+  <br>
+
+  <h1>Questions and Answers</h1>
+	<div class="question bg-danger  text-light">
+		<p> Question 1.What is your name?</p>
+		<a href="#" class="show-answer">Show Answer</a>
+		<div class="card answer bg-success  text-light">
+			<p>Answer 1. my name is yogeshwaran</p>
+		</div>
+	</div>
+	<div class="question bg-danger  text-light">
+		<p> Question 2.What is your role?</p>
+		<a href="#" class="show-answer ">Show Answer</a>
+		<div class="card answer bg-success text-light">
+			<p>Answer 2. C&M AM&C</p>
+		</div>
+	</div>
+	<div class="card question bg-danger  text-light">
+		<p>Question 3. Which location?</p>
+		<a href="#" class="show-answer">Show Answer</a>
+		<div class="card answer bg-success  text-light">
+			<p>Answer 3. Banglore</p>
+		</div>
+	</div>
+
+	<script>
+
+        // style for q&A
+		$(document).ready(function() {
+			$(".show-answer").click(function() {
+				$(this).parent().find(".answer").slideToggle();
+				return false;
+			});
+		});
+	</script>
+	
+	<script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	
+	<script>
+	
+
+    $(document).ready(function() {
+  // Apply pink background to rows whose quantity is zero
+  $("#myTable tbody tr td:nth-child(3)").filter(function() {
+    return $(this).text() == "0";
+    
+   	
+  }).parent().parent().css("background-color", "red");
+
+  // Apply lightgreen background to rows whose quantity is not zero
+  $("#myTable tbody tr td:nth-child(3)").filter(function() {
+    return $(this).text() != "0";
+  }).parent().css("background-color", "lightgreen");
+
+  // Apply different background colors to first and last row
+  $("#myTable tbody tr:first-child").css("background-color", "Black");
+  $("#myTable tbody tr:last-child").css("background-color", "black");
+});
+
+
+
+
+$(document).ready(function()
+{
+
+//Remove row
+$("#table1").on("click", ".removeRow", function() {
+    $("#t1").val("");
+					$("#t2").val(  ""  );
+					$("#t3").val(  ""  );
+					
+
+$(this).closest("tr").remove();
+});
+
+//change color for row
+
+$("#table1  a").click(function()
+			 {
+	        	    $("#table1  tr").css("background-color", "white");
+	        	    
+					let pname  =   $(this).parent().siblings().eq(0).text();
+					let price  =   	  $(this).parent().siblings().eq(1).text();
+					let qty  =   		  $(this).parent().siblings().eq(2).text();
+					
+					$("#t1").val(  pname  );
+					$("#t2").val(  price  );
+					$("#t3").val(  qty  );
+					
+					$(this).parent().parent().css("background-color", "pink");
+		
+			 });
+
+
+             //addrow
+	
+$("#addRow").click(function() {
+var name = $("#t1").val();
+var price = $("#t2").val();
+var quantity = $("#t3").val();
+var cols = "";
+cols+= '<tr>'
+cols+= '<td><a href="#" class="removeRow"> Remove</a></td>' 
+cols+= '<td><a href="#">Select</a></td>'
+cols+= '<td id="t1">' +name+ '</td>'   
+cols+= '<td id="t2">' +price+ '</td>'   
+cols+= '<td id="t3">' +quantity+ '</td>'   
+cols+= '</tr>'
+
+	   
+var newRow =  cols;
+$("#table2").append(newRow);
+});
+});
+				
+
+
+
+$("#table2").on("click", ".removeRow", function() {
+                    $("#t1").val("");
+					$("#t2").val(  ""  );
+					$("#t3").val(  ""  );
+					
+
+$(this).closest("tr").remove();
+});
+
+
+$("#table2  a").click(function()
+			 {
+	        	    $("#table2  tr").css("background-color", "white");
+	        	    
+					let pname  =   $(this).parent().siblings().eq(0).text();
+					let price  =   	  $(this).parent().siblings().eq(1).text();
+					let qty  =   		  $(this).parent().siblings().eq(2).text();
+					
+					$("#t1").val(  pname  );
+					$("#t2").val(  price  );
+					$("#t3").val(  qty  );
+					
+					$(this).parent().parent().css("background-color", "pink");
+		
+			 });
+
+
+	</script>
+    </div>
+	
+ </body>
+</html>
+
