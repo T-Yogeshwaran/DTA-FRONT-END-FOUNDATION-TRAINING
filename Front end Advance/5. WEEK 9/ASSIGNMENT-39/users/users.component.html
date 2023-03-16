@@ -1,0 +1,21 @@
+ <h3>Server Communication using HttpClient in Angular </h3>
+<hr/>
+ 
+<input type="button" value="Get Data" (click)="getData_click()" />
+<hr/>
+<table  border="2" cellspacing="0" width="600">
+  <tr>
+      <th>Employee Number</th>
+      <th>Employee Name</th>
+      <th>Employee Job</th>
+      <th>Employee Deptno</th>
+     
+  </tr>
+  <tr *ngFor="let item of UsersArray  ">
+      <td>{{item.id}} </td>
+      <td>{{item.email}}</td>
+      <td>{{item.first_name }}</td>
+      <td>{{item.last_name}}</td>
+     
+  </tr>
+</table>

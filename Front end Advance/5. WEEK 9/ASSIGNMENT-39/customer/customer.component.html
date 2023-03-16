@@ -1,0 +1,41 @@
+<h3>Perform CRUD operations on Server Data using HttpClient</h3>
+<hr/>
+
+<input  placeholder="Emp Number"  [(ngModel)]="id"  />
+<input  placeholder="Emp Name"  [(ngModel)]="name"  />
+<input  placeholder="Emp city"  [(ngModel)]="city"  />
+<input  placeholder="Emp email"  [(ngModel)]="email"  />
+<input  placeholder="Emp country"  [(ngModel)]="country"  />
+
+ <br/><br/>
+ <input type="button" value="Get Emps" (click)="getEmpsButton_click()" />
+ <input type="button" value="Add Emp" (click)="addEmpButton_click()" />
+ <input type="button" value="Update Emp" (click)="updateEmpButton_click()" />
+ <br/><br/>
+<table  border="2" cellspacing="0" width="600">
+    <tr>
+        <th>Customer ID</th>
+        <th>Customer Name</th>
+        <th>Customer City</th>
+        <th>Customer Email</th>
+        <th>Customer Country</th>
+
+        <th></th>
+    </tr>
+    <tr *ngFor="let item of empsArray; let i = index;">
+        <td>{{item.id}} </td>
+        <td>{{item.name}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.country}}</td>
+
+        <td>
+            <a (click)="selectEmpButton_click(item.id)" href="javascript:void(0);">
+                <img width="20" src="assets/select.png" />
+            </a> |
+            <a (click)="deleteEmpButton_click(item.id)" href="javascript:void(0);">
+                <img width="20" src="assets/delete.png" />
+            </a>
+        </td>
+    </tr>
+</table>

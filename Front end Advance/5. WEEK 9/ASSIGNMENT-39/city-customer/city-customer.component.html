@@ -1,0 +1,22 @@
+<h3>Perform CRUD operations on Server Data using HttpClient</h3>
+<hr/>
+
+<h2>Select city:</h2>
+<select [(ngModel)]="selectedCity">
+  <option value="">Select city</option>
+  <option *ngFor="let item of cities" [value]="item">{{ item }}</option>
+</select>
+<button (click)="getCustomersByCity()">Get Customers</button>
+
+  <h2>Customers in {{ selectedCity }}:</h2>
+  <div *ngFor="let item of city_data">
+    {{item.id}}
+        <td>{{item.name}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.country}}</td>
+  </div>
+
+
+
+
